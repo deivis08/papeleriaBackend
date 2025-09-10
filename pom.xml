@@ -27,6 +27,15 @@
 		<url/>
 	</scm>
 	<properties>
+            <sonar.projectKey>devapps:mi-app</sonar.projectKey>
+            <sonar.host.url>http://localhost:9000</sonar.host.url>
+            <sonar.login>${env.SONAR_TOKEN}</sonar.login>
+
+            <!-- importante para JaCoCo -->
+            <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+
+            <maven.test.skip>false</maven.test.skip>
+            <jacoco.version>0.8.12</jacoco.version>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
@@ -57,6 +66,39 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+						<!-- sonar -->
+                        <plugin>
+                            <groupId>org.sonarsource.scanner.maven</groupId>
+                            <artifactId>sonar-maven-plugin</artifactId>
+                            <version>25.9.0.1127</version>
+                        </plugin>
+                        <!-- JaCoCo para cobertura -->
+                        <plugin>
+                          <groupId>org.jacoco</groupId>
+                          <artifactId>jacoco-maven-plugin</artifactId>
+                          <version>${jacoco.version}</version>
+                          <executions>
+                            <execution>
+                              <goals>
+                                <goal>prepare-agent</goal>
+                              </goals>
+                            </execution>
+                            <execution>
+                              <id>report</id>
+                              <phase>test</phase>
+                              <goals>
+                                <goal>report</goal>
+                              </goals>
+                            </execution>
+                          </executions>
+                        </plugin>
+
+                        <!-- Surefire para pruebas -->
+                        <plugin>
+                          <groupId>org.apache.maven.plugins</groupId>
+                          <artifactId>maven-surefire-plugin</artifactId>
+                          <version>3.2.5</version>
+                        </plugin>
 		</plugins>
 	</build>
 

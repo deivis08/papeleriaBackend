@@ -1,0 +1,11 @@
+com\example\papeleriaBackend\controlador\CategoriaController.class
+com\example\papeleriaBackend\repositorio\CategoriasRepositorio.class
+com\example\papeleriaBackend\service\ProductosServiceImp.class
+com\example\papeleriaBackend\service\CategoriasService.class
+com\example\papeleriaBackend\modelo\Productos.class
+com\example\papeleriaBackend\service\CategoriasServiceImp.class
+com\example\papeleriaBackend\service\ProductosService.class
+com\example\papeleriaBackend\controlador\ProductoController.class
+com\example\papeleriaBackend\repositorio\ProductosRepositorio.class
+com\example\papeleriaBackend\modelo\Categorias.class
+com\example\papeleriaBackend\PapeleriaBackendApplication.class
