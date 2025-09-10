@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.example.papeleriaBackend;
+package com.example.papeleriaBackend.modelo;
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
  *
  * @author david
  */
-public class Categorias {
+public class Categoria {
      @Id
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
  */
-package com.example.papeleriaBackend;
+package com.example.papeleriaBackend.repositorio;
 
+import com.example.papeleriaBackend.modelo.Producto;
 import java.util.List;
 import org.springframework.data.repository.Repository;
 
@@ -11,9 +12,10 @@ import org.springframework.data.repository.Repository;
  *
  * @author david
  */
-public interface CategoriasRepositorio extends Repository<Categorias,Integer>{
-    List<Categorias>findAll();
-    Categorias save(Categorias p);
-    Categorias findById(int id);
-    Categorias deleteById(int id);
+public interface ProductoRepositorio  extends Repository<Producto,Integer>{
+    List<Producto>findAll();
+    Producto save(Producto p);
+    Producto findById(int id);
+    Producto deleteById(int id);
+    
 }
